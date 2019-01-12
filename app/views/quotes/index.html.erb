@@ -1,0 +1,18 @@
+<h1>Welcome to Anonymous Quotes!</h1>
+
+<% if @quotes.empty? %>
+  No quotes added
+<%else%>
+
+
+  <% @quotes.each do |quote| %>
+    <table>
+      <tr>
+        <%= quote.text %>
+      </tr>
+    </table>
+  <% end %>
+<%end%>
+
+
+<%= link_to "Add new quote", new_quote_path %>
