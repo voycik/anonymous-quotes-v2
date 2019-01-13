@@ -10,9 +10,11 @@ class QuotesController < ApplicationController
   def create
     @quote = Quote.new(quote_params)
     if @quote.save
+      flash[:success] = "New quote has been created"
       redirect_to quotes_path
     else
-      render new_quote_path
+      flash.now[:danger] = "New quote has not been created"
+      render :new
     end
   end
 

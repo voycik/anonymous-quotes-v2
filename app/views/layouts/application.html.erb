@@ -31,7 +31,15 @@
       </div>
     </nav>
     </header>
-
-    <%= yield %>
+    <div class='form-group'>
+      <div class='col-md-12'>
+        <% flash.each do |key, message| %>
+          <div class="text-center alert alert-<%= key == 'notice'? 'success': 'danger' %>">
+            <%= message %>
+          </div>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
