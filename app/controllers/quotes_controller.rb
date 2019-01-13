@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   def index
-    @quotes = Quote.all
+    @quotes = Quote.all.paginate(page: params[:page], per_page: 5)
   end
 
   def new
