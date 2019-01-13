@@ -1,4 +1,5 @@
 class QuotesController < ApplicationController
+
   def index
     @quotes = Quote.all.paginate(page: params[:page], per_page: 5)
   end
@@ -19,7 +20,7 @@ class QuotesController < ApplicationController
   end
 
   def show
-    @quote = Quote.find
+    @quote = Quote.find(params[:id])
   end
 
   private

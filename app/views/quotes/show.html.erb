@@ -1,0 +1,10 @@
+<div class="well well-lg">
+  <div class="quote-body">
+    <%= @quote.text %>
+    <%= simple_form_for ([@quote, @quote.comments.build]) do |f| %>
+      <%= f.input :user %>
+      <%= f.input :body %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
