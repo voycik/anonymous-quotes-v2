@@ -8,5 +8,6 @@ Task was to create a simple Rails app to store anonymous citation/quotes. Login 
 - optional: add possibility to add comments to citations.
 
 Gems used:
-- simple_form 4.1.0 
-- bootstrap-sass 3.4.0 
+- simple_form 4.1.0
+- bootstrap-sass 3.4.0
+- will_paginate 3.1.6 

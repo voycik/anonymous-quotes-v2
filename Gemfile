@@ -31,6 +31,8 @@ gem 'autoprefixer-rails', '~> 9.4', '>= 9.4.4'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
