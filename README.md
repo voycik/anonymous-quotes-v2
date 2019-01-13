@@ -1,24 +1,13 @@
-# README
+# About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is a recruitment task for Ruby on Rails workshops.
 
-Things you may want to cover:
+Task was to create a simple Rails app to store anonymous citation/quotes. Login or user accounts were not required, just two views:
+    -view of all citations on index page (starting one)
+    -view to add single citation
+    
+    -optional: add possibility to add comments to citations.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Gems used:
+    - simple_form 4.1.0 
+    - bootstrap-sass 3.4.0 
