@@ -1,24 +1,18 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <% if @quotes.empty? %>
-        No quotes added
-      <%else%>
-        <% @quotes.each do |quote| %>
-          <div class="well well-lg">
-            <div class="quote-body">
-              <%= quote.text %>
-            </div>
-            <div class="quote-comments-link">
-              <%= link_to "Comments(#{quote.comments.count})", quote_path(quote) %>
-            </div>
-          </div>
-
-        <% end %>
-      <%end%>
-      <div class = 'flickr_pagination'>
-        <%= will_paginate @posts %>
+<% if @quotes.empty? %>
+  <h1>No quotes created</h1>
+<%else%>
+  <% @quotes.each do |quote| %>
+    <div class="well well-lg">
+      <div class="quote-body">
+        <%= quote.text %>
+      </div>
+      <div class="quote-comments-link">
+        <%= link_to "Comments(#{quote.comments.count})", quote_path(quote) %>
       </div>
     </div>
-  </div>
+
+  <% end %>
+<%end%>
+<div class = 'flickr_pagination'>
+  <%= will_paginate @posts %>
 </div>

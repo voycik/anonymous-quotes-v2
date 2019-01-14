@@ -1,0 +1,14 @@
+<% if @quote.comments.empty? %>
+  No comments added
+<% else %>
+  <% @quote.comments.each do |comment| %>
+    <div class="well well-sm">
+      <div class ='user-name'>
+        <%= "#{comment.user}: " %>
+      </div>
+      <div class = "comment-body">
+        <%= comment.body %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
