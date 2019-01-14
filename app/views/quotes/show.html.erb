@@ -1,10 +1,23 @@
 <div class="well well-lg">
   <div class="quote-body">
     <%= @quote.text %>
+  </div>
+
+  <% if @quote.comments.empty? %>
+    No comments added
+  <% else %>
+    <% @quote.comments.each do |comment| %>
+      <div class="well well-lg">
+        <%= "#{comment.user}: " %>
+        <small><%= comment.body %></small>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
     <%= simple_form_for ([@quote, @quote.comments.build]) do |f| %>
       <%= f.input :user %>
       <%= f.input :body %>
       <%= f.button :submit %>
     <% end %>
-  </div>
-</div>
