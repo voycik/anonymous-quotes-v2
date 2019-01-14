@@ -9,7 +9,9 @@
             <div class="quote-body">
               <%= quote.text %>
             </div>
-            <small><%= link_to "Comments(#{quote.comments.count})", quote_path(quote) %></small>
+            <div class="quote-comments-link">
+              <%= link_to "Comments(#{quote.comments.count})", quote_path(quote) %>
+            </div>
           </div>
 
         <% end %>
